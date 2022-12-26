@@ -13,13 +13,16 @@
     <div class="container">
         <h1>Todo List</h1>
         <hr>
-        <label>Nueva Tarea</label>
-        <input id= "input-description" type="text" />
-        <button onclick="addTask()">Agregar</button>
+        <p>Nueva Tarea</p>
+        <div class="container__input">
+            <input id= "input-description" type="text" />
+            <button onclick="addTask()">Agregar</button>
+        </div>
+
         <div class="container__display">
             <div>
-                <p>Total</p>
-                <p>Realizadas</p>
+                <p>Total: <span id="total-task">0</span></p>
+                <p>Realizadas: <span id="completed-task">0</span></p>
             </div>
             <div>
                 <table id="table-tasks"></table>
