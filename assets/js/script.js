@@ -9,7 +9,7 @@ let tasks = [
 ]
 
 // Inicializar variables de elementos en DOM
-const tableTasks = document.querySelector("#table-tasks");
+const tbodyTasks = document.querySelector("#tbody-tasks");
 const description = document.querySelector("#input-description");
 const taskTotal = document.querySelector("#total-task");
 const taskCompleted = document.querySelector("#completed-task");
@@ -54,14 +54,7 @@ const calculateTotalTasks = () => {
 
 // Renderizar tabla de tareas
 const renderTable = () => {
-    let trHtml = `
-    <tr>
-        <th>ID</th>
-        <th>Tarea</th>
-        <th>✔️</th>
-        <th>🗑️</th>    
-    </tr>
-    `
+    let trHtml = ""
     for (let task of tasks) {
         trHtml += `
         <tr>
@@ -72,7 +65,7 @@ const renderTable = () => {
         </tr>
         `
     }
-    tableTasks.innerHTML = trHtml;
+    tbodyTasks.innerHTML = trHtml;
 }
 
 // Limpiar y enfocar input de ingreso

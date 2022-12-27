@@ -15,7 +15,7 @@
         <hr>
         <p>Nueva Tarea</p>
         <div class="container__input">
-            <input id= "input-description" type="text" />
+            <input id="input-description" type="text" />
             <button onclick="addTask()">Agregar</button>
         </div>
 
@@ -25,7 +25,19 @@
                 <p>Realizadas: <span id="completed-task">0</span></p>
             </div>
             <div>
-                <table id="table-tasks"></table>
+                <table>
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tarea</th>
+                            <th>✔️</th>
+                            <th>🗑️</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-tasks">
+                    </tbody>
+                </table>
             </div>
         </div>
 
